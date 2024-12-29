@@ -1,0 +1,178 @@
+/* Réinitialisation des styles */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* Conteneur principal */
+.content {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../public/assets/images/Contentbg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+}
+
+/* En-tête et pied de page */
+.header, .footer {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 10px;
+}
+
+.header {
+  top: 0;
+  font-weight: bold;
+}
+
+.footer {
+  bottom: 0;
+  font-size: 0.9rem;
+}
+
+/* Section des colonnes */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Colonne de gauche (image lune) */
+.content-col-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Colonne de droite (texte) */
+.content-col-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Titre */
+h1.content-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Texte */
+.content p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* Bouton */
+.content a {
+  padding: 10px 20px;
+  background-color: #f9ca24;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+}
+
+.content a:hover {
+  background-color: #f39c12;
+}
+
+/* Images */
+.content img {
+  max-width: 150px;
+  margin: 20px;
+}
+
+/* Ajout de l'image lune avec espacement */
+.imgm {
+  margin-right: 50px;
+}
+
+/* Responsive pour petits écrans */
+@media screen and (max-width: 768px) {
+  .content {
+      padding: 10px;
+  }
+
+  h1.content-title {
+      font-size: 2rem;
+  }
+
+  .content p {
+      font-size: 1rem;
+  }
+
+  .content a {
+      padding: 8px 16px;
+  }
+
+  .content img {
+      max-width: 100px;
+  }
+  
+}
+
+/* Style du bouton de changement de thème */
+.theme-switch-btn {
+  padding: 8px 15px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.theme-switch-btn.light {
+  background-color: #f9ca24;
+  color: black;
+}
+
+.theme-switch-btn.light:hover {
+  background-color: #f39c12;
+}
+
+.theme-switch-btn.dark {
+  background-color: #4a4a4a;
+  color: white;
+}
+
+.theme-switch-btn.dark:hover {
+  background-color: #333333;
+}
+
+/* Style du sélecteur de langue */
+.language-dropdown {
+  padding: 8px 15px;
+  font-size: 1rem;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  background-color: white;
+  color: black;
+  transition: all 0.3s ease;
+}
+
+.language-dropdown:hover {
+  border-color: #f39c12;
+}

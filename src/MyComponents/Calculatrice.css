@@ -1,0 +1,144 @@
+.calculator-app {
+  text-align: center;
+}
+
+.calculator-app .calculator-grid {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(4, 6rem);
+  grid-template-rows: minmax(7rem, auto) repeat(5, 6rem);
+  gap: 10px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(12px);
+  animation: fadeIn 1s ease-in-out;
+}
+
+.calculator-app .output {
+  grid-column: 1 / -1;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  padding: 1rem;
+  word-wrap: break-word;
+  word-break: break-all;
+  border-radius: 10px;
+  box-shadow: inset 0px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.calculator-app .output .previous-operand {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1.2rem;
+  font-weight: lighter;
+}
+
+.calculator-app .output .current-operand {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.calculator-app .calculator-grid > button {
+  cursor: pointer;
+  font-size: 1.5rem;
+  border: none;
+  outline: none;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+  color: white;
+  border-radius: 15px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;
+  animation: glow 3s infinite alternate;
+}
+
+.calculator-app .calculator-grid > button:hover {
+  transform: translateY(-4px);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.3));
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
+}
+
+.calculator-app .calculator-grid > button:active {
+  transform: scale(0.9);
+  box-shadow: inset 0px 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.calculator-app .span-two {
+  grid-column: span 2;
+  background: linear-gradient(135deg, #FF7E79, #FFB580);
+  color: white;
+  font-weight: bold;
+}
+
+.calculator-app .equals-btn {
+  background: linear-gradient(135deg, #3AD29F, #2CC995);
+  color: white;
+  font-weight: bold;
+}
+
+.calculator-app .delete-btn {
+  background: linear-gradient(135deg, #F8D800, #F78B00);
+  color: white;
+  font-weight: bold;
+}
+
+.calculator-app .clear-btn {
+  background: linear-gradient(135deg, #E94E77, #D9306F);
+  color: white;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .calculator-app .calculator-grid {
+    grid-template-columns: repeat(4, 4rem);
+    grid-template-rows: minmax(6rem, auto) repeat(5, 4rem);
+    transform: scale(0.9);
+  }
+}
+
+@media (max-width: 480px) {
+  .calculator-app .calculator-grid {
+    grid-template-columns: repeat(4, 3rem);
+    grid-template-rows: minmax(5rem, auto) repeat(5, 3rem);
+    transform: scale(0.8);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  100% {
+    box-shadow: 0px 4px 15px rgba(0, 255, 255, 0.7);
+  }
+}
+
+.calculator-app body {
+  margin: 0;
+  background: linear-gradient(135deg, #2C3E50, #4CA1AF);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Arial", sans-serif;
+  color: white;
+  overflow: hidden;
+}
+
+.calculator-app *, .calculator-app *::before, .calculator-app *::after {
+  box-sizing: border-box;
+}
